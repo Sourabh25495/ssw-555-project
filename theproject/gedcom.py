@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 from prettytable import PrettyTable
-FILE_PATH = './GEDCOM.ged'
+from datetime import datetime
+import US04
+FILE_PATH = './Gedcom1.ged'
 INDIs = {}
 FAMs = {}
 
@@ -118,7 +120,6 @@ def print_families():
             v.children])
     print(_families_table)
 
-
 class Individual(object):
     '''Class represent an Individual'''
 
@@ -144,9 +145,3 @@ class Familie(object):
         self.children = []
 
 
-if __name__ == '__main__':
-    parse(FILE_PATH)
-    print('\nIndividuals')
-    print_individuals()
-    print('\nFamilies')
-    print_families()
